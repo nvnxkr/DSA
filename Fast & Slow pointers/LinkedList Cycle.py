@@ -12,6 +12,7 @@
 # Output: true
 # Explanation: There is a cycle in the linked list, where the tail connects to the 1st node (0-indexed).
 
+
 # Definition for singly-linked list.
 class ListNode:
     def __init__(self, x):
@@ -19,37 +20,30 @@ class ListNode:
         self.next = None
 
 
-def hasCycle( head) -> bool:
-    slow=head
-    fast=head
+def hasCycle(head) -> bool:
+    slow = head
+    fast = head
 
     while fast is not None and fast.next is not None:
-        slow=slow.next
-        fast=fast.next.next
+        slow = slow.next
+        fast = fast.next.next
 
-        if slow==fast:
+        if slow == fast:
             return True
 
     return False
 
+    # if not head or not head.next:
+    #     return False
 
+    # slow = head
+    # fast = head
 
+    # while fast and fast.next:
+    #     slow = slow.next          # move by 1 step
+    #     fast = fast.next.next     # move by 2 steps
 
+    #     if slow == fast:
+    #         return True
 
-
-        # if not head or not head.next:
-        #     return False
-        
-        # slow = head
-        # fast = head
-        
-        # while fast and fast.next:
-        #     slow = slow.next          # move by 1 step
-        #     fast = fast.next.next     # move by 2 steps
-            
-        #     if slow == fast:
-        #         return True
-        
-        # return False
-
-        
+    # return False
