@@ -1,4 +1,4 @@
-'''
+"""
 You are given a root binary search tree and an integer x . Your task is to find the Ceil of x in the tree.
 Note: Ceil(x) is a number that is either equal to x or is immediately greater than x.
 If Ceil could not be found, return -1.
@@ -13,32 +13,30 @@ Output: 7
 Explanation: We find 7 in BST, so ceil of 6 is 7.
 You are given a root binary search tree and an integer x . Your task is to find the Ceil of x in the tree.
 
-'''
+"""
 
-''' class Node:
+""" class Node:
     def __init__(self, val):
         self.right = None
         self.data = val
         self.left = None 
-'''
+"""
 
 
-def findCeil(self,root, x):
+def findCeil(self, root, x):
     # code here
-    ans=-1
-    
-    while root:
-        if root.data==x:
-            ans=x
-            return ans
-            
-        elif root.data>x:
-            ans=root.data
-            root=root.left
-            
-            
-        else:
-            root=root.right
-            
-    return ans
+    ans = -1
 
+    while root:
+        if root.data == x:
+            ans = x
+            return ans
+
+        elif root.data > x:
+            ans = root.data
+            root = root.left
+
+        else:
+            root = root.right
+
+    return ans

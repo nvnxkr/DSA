@@ -15,8 +15,6 @@ Input: root = [4,2,7,1,3,null,null,null,null,null,null], val = 5
 Output: [4,2,7,1,3,5]
 """
 
-
-
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
@@ -25,8 +23,8 @@ Output: [4,2,7,1,3,5]
 #         self.right = right
 
 
-def insertIntoBST(root, val: int) -> TreeNode:
-    n = TreeNode(val)
+def insertIntoBST(root, val: int) -> TreeNode:  # type: ignore
+    n = TreeNode(val)  # type: ignore
     node = root
     if not node:
         return n
