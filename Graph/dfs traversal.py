@@ -10,8 +10,6 @@ for u, v in edges:
 
 print(lst)
 
-from collections import deque
-from tracemalloc import start
 
 visited=[0]*(n+1)
 def dfs(lst,ans,n,start,visited):
