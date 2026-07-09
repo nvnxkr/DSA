@@ -20,6 +20,18 @@ Output: 0
 Explanation: The endWord "cog" is not in wordList, therefore there is no valid transformation sequence.
  
 '''
+# Algorithm
+
+# Put all words from wordList into a set.
+# If endWord is not in the set, return 0.
+# Start BFS from beginWord.
+# Pop one word from the queue.
+# Change one character at a time (a to z) to generate new words.
+# If the new word is in the set:
+# Push it into the queue with steps + 1.
+# Remove it from the set (mark as visited).
+# If you reach endWord, return the number of steps.
+# If the queue becomes empty, return 0.
 
 from collections import deque
 from typing import List
